@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner ler = new Scanner(System.in);
-
+		
 		// Início do programa da classe Retangulo
 		Retangulo ret = new Retangulo();
 		System.out.println("Digite o valor da altura e da largura do retângulo");
@@ -21,7 +21,7 @@ public class Main {
 		// Término do Programa
 		System.out.println();
 		ler.nextLine();
-		// Início do programa da classa Funcionario
+		// Início do programa da classe Funcionario
 		Funcionario func = new Funcionario();
 		
 		System.out.print("Nome: ");
@@ -50,6 +50,13 @@ public class Main {
 		
 		estudante.Situacao();
 		// Término do Programa
+		
+		System.out.print("Qual é a cotação atual do dólar? R$");
+		double cotacao = ler.nextDouble();
+		System.out.print("Quantos dólares você deseja comprar? ");
+		double qtd_Dolar = ler.nextDouble();
+		System.out.printf("O valor da compra em reais é: R$ %.2f ", ConversorMoeda.conversor(cotacao, qtd_Dolar));
+		
 		ler.close();
 	}
 
