@@ -9,6 +9,7 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner ler = new Scanner(System.in);
 		
+		/* Inicio do Conta_Banco
 		Conta_Banco conta1;
 		
 		System.out.print("Número da Conta: ");
@@ -44,8 +45,35 @@ public class Main {
 		conta1.sacar(valor);
 		System.out.println("Conta Atualizada...");
 		System.out.println(conta1);
+		*/
 		
+		//Inicio do programa de Estudante
+		Estudante[] quartos = new Estudante[10];
+		
+		System.out.print("Quantos quartos alugados? ");
+		int qtd = ler.nextInt();
+		
+		for (int i = 0; i < qtd; i++) {
+			ler.nextLine();
+			System.out.println("Rent"+(i+1)+":");
+			System.out.print("Nome: ");
+			String nome = ler.nextLine();
+			System.out.print("Email: ");
+			String email = ler.nextLine();
+			System.out.print("Quarto: ");
+			int quarto = ler.nextInt();
+			quartos[quarto] = new Estudante(nome, email);
+			System.out.println();
+		}
+		
+		System.out.println("Quartos Ocupados...");
+		
+		for (int i = 0; i < quartos.length; i++) {
+			if (quartos[i] != null) {
+				System.out.println(i + ":" + quartos[i]);
+			}
+			
+		}
 		ler.close();
 	}
-
 }
